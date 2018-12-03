@@ -13,9 +13,23 @@ class ToHave extends Migration
      */
     public function up()
     {
-        //
-    }
 
+        Schema::create('to_have', function (Blueprint $table) 
+        {
+            $table->unsignedInteger('fk_picture');    
+            $table->unsignedInteger('fk_tag');
+        
+            $table->foreign('fk_picture')
+                ->references('picture_id')->on('pictures')
+                ->onDelete('cascade');
+                ->onUpdate('cascade');
+            $table->foreign('fk_tag')
+                ->references('tag_id')->on('tags')
+                ->onDelete('cascade');
+                ->onUpdate('cascade');
+
+        });
+    }
     /**
      * Reverse the migrations.
      *
@@ -23,6 +37,6 @@ class ToHave extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('to_have');
     }
 }
