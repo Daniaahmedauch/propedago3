@@ -21,11 +21,11 @@ class ToHave extends Migration
         
             $table->foreign('fk_picture')
                 ->references('picture_id')->on('pictures')
-                ->onDelete('cascade');
+                ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->foreign('fk_tag')
                 ->references('tag_id')->on('tags')
-                ->onDelete('cascade');
+                ->onDelete('cascade')
                 ->onUpdate('cascade');
 
         });
