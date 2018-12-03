@@ -13,7 +13,7 @@ class ToBelong extends Migration
      */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('to_belong', function (Blueprint $table) {
             $table->unsignedInteger('fk_picture');
             $table->unsignedInteger('fk_category');
 
