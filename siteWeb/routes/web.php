@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('Accueil', 'sendPicture@show');
+
+Route::post('/api/pictures/{id}', "sendPicture@sendJson");

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Pictures;
 
 class sendPicture extends Controller
@@ -13,5 +14,11 @@ class sendPicture extends Controller
         return view('accueil',[
             "pictures" => $pictures
             ]);
+    }
+
+    public function sendJson($id)
+    {
+    	$pictures = Pictures::where('picture_id', $id)->get();
+    	echo json_encode($pictures);
     }
 }
