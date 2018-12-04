@@ -16,8 +16,6 @@ class Pictures extends Migration
         Schema::create('pictures', function (Blueprint $table) {
            $table->increments('picture_id');
            $table->string('picture_name');
-           $table->string('picture_category');
-           $table->text('picture_description');
            $table->string('picture_url');
            $table->timestamps();
        });
