@@ -18,7 +18,7 @@ php artisan iseed cms_statistic_components
 php artisan iseed cms_users
 php artisan iseed migrations
 php artisan iseed categories
-php artisan iseed pictures
+
 php artisan iseed to_have
 php artisan iseed to_belong
 php artisan iseed tags
