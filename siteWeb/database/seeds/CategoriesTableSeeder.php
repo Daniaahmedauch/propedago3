@@ -16,6 +16,15 @@ class CategoriesTableSeeder extends Seeder
 
         \DB::table('categories')->delete();
         
+        \DB::table('categories')->insert(array (
+            0 => 
+            array (
+                'category_id' => 1,
+                'category_name' => 'PHILIPPE',
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
+        ));
         
         
     }
