@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Picture;
+use App\Pictures;
 
 class sendPicture extends Controller
 {
     public function show(){
-        $pictures = Picture::all();
-        return view('accueil', compact("accueil"));
+        
+        $pictures = Pictures::all();
+        return view('accueil',[
+            "pictures" => $pictures
+            ]);
     }
 }
