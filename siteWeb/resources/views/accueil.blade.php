@@ -1,5 +1,5 @@
 @section('titre')
-Accueil
+    Accueil
 @endsection
 
 @section('contenu')
