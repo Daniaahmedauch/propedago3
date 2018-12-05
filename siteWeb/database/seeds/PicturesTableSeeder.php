@@ -19,7 +19,7 @@ class PicturesTableSeeder extends Seeder
         \DB::table('pictures')->insert(array (
             0 => 
             array (
-                'picture_id' => 76,
+                'picture_id' => 155,
                 'picture_name' => 'judo',
                 'picture_url' => 'images/judo.JPG',
                 'created_at' => NULL,
